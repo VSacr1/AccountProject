@@ -5,13 +5,14 @@ import static org.junit.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class Testing {
 
 	Map<Integer, Account> map = new HashMap<Integer, Account>();
-	AccountMap creatingmap = new AccountMap();
+	AccountMap creatingMap = new AccountMap();
 	
 	@Before
 	public void beforeTesting()
@@ -31,10 +32,22 @@ public class Testing {
 	@Test
 	public void test2()
 	{
-		creatingmap.createMap();
-		assertEquals("This doesn't equal 3", 3, creatingmap.getCounter());
+		creatingMap.createMap("John");
+		assertEquals("This doesn't equal 3", 3, creatingMap.getCounter());
 	}
-
+	
+	@Test
+	public void test3()
+	{
+		creatingMap.createMap("Max");
+		assertEquals("This doesn't equal 1", 1, creatingMap.getCounter());
+	}
+	
+	@After 
+	public void tearDown()
+	{
+		map.clear();
+	}
 
 
 }

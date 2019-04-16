@@ -10,7 +10,7 @@ public class App
 	public static void main(String [] args)
 	{
 		AccountMap map = new AccountMap();
-		map.createMap();
+		map.createMap("John");
 	}
 
     

@@ -9,9 +9,6 @@ import com.google.gson.Gson;
 public class AccountMap {
 	
 	private int counter = 0; 
-
-
-	private String check = "John";
 	
 	
 	public AccountMap()
@@ -19,7 +16,7 @@ public class AccountMap {
 		
 	}
 	
-	public void createMap()
+	public void createMap(String check)
     {
 		Map<Integer, Account> map = new HashMap<Integer, Account>();
     	
