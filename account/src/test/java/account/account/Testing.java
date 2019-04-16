@@ -28,6 +28,13 @@ public class Testing {
 		assertEquals("Name does not exist!!", "John", map.get(1).getFirstName());
 	}
 	
+	@Test
+	public void test2()
+	{
+		creatingmap.createMap();
+		assertEquals("This doesn't equal 3", 3, creatingmap.getCounter());
+	}
+
 
 
 }
